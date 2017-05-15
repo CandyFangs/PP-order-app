@@ -1,15 +1,29 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  type: 
-  model: MyString
-  description: MyString
+  kind: "uszka"
+  model: "kocie"
+  description: "puchate"
   price: 1
   pic: MyString
 
 two:
-  type: 
-  model: MyString
-  description: MyString
+  kind: "obroża"
+  model: "falbaniasta"
+  description: "falbanki, wstążka, kokardki"
+  price: 1
+  pic: MyString
+
+three:
+  kind: "ogon"
+  model: "lisi"
+  description: "puchata kita"
+  price: 1
+  pic: MyString
+
+four:
+  kind: "łapki"
+  model: "kocie"
+  description: "puchate rękawiczki"
   price: 1
   pic: MyString

@@ -2,10 +2,10 @@ require 'test_helper'
 
 class ProductTest < ActiveSupport::TestCase
 
-	test "is type present" do
+	test "is kind present" do
 		product = Product.new
 		product.valid?
-		assert_includes product.errors.full_messages, "Type can't be blank"
+		assert_includes product.errors.full_messages, "Kind can't be blank"
 	end
 
 	test "is model present" do

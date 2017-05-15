@@ -35,15 +35,16 @@ class ProductsController < ApplicationController
 	end
 
 	def destroy
+		@product = Product.find(params[:id])
 		@product.destroy
-		flash[:notice] = "Usunięto rekord #{product.id}:#{product.model}"
+		flash[:notice] = "Usunięto produkt"
 		redirect_to products_path
 	end
 
 	private
 
 	def product_params
-		params.require(:product).permit(:type, :model, :price)
+		params.require(:product).permit(:kind, :model, :price, :description, :pic)
 	end
 
 end
