@@ -7,6 +7,11 @@ class MaterialsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  # test "should show response" do
+  #   get material_path(material)
+  #   assert_response :success
+  # end
+
   test "should edit response" do
     get materials_path
     assert_response :success
@@ -19,17 +24,17 @@ class MaterialsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create new material" do
     assert_difference('Material.count') do
-    post materials_url, params: { material: { brand: 'minky', color: 'pink' } }
+    post materials_url, params: { material: { brand: 'minky' } }
     assert_redirected_to materials_path
     end
   end
 
   test "should update material" do
     material = materials(:one)
-    patch material_url(material), params: { material: { color: "white" } }
+    patch material_url(material), params: { material: { brand: "polar" } }
     assert_redirected_to materials_path
     material.reload
-    assert_equal "white", material.color
+    assert_equal "polar", material.brand
   end
 
   test "should destroy material" do

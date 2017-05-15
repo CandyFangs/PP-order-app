@@ -2,12 +2,10 @@
 
 one:
   brand: "minky"
-  color: "red"
 
 two:
   brand: "fur"
-  color: "black"
 
 three:
   brand: "satin"
-  color: "pink"
+  

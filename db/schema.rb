@@ -10,14 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170515114448) do
+ActiveRecord::Schema.define(version: 20170515133621) do
+
+  create_table "colors", force: :cascade do |t|
+    t.string "material_id"
+    t.string "color"
+    t.string "picture"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "materials", force: :cascade do |t|
     t.string "brand"
-    t.string "color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "pic"
   end
 
   create_table "products", force: :cascade do |t|

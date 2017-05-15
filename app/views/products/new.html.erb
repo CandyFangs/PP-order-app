@@ -1,3 +1,4 @@
 <%= flash[:error] if flash[:error] %>
 <h3>Utwórz nowy produkt</h3>
 <%= render partial: 'form', locals: { product: @product } %>
+<%= link_to "Wróć do strony produktów", products_path %>

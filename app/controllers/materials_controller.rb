@@ -8,6 +8,10 @@ class MaterialsController < ApplicationController
 		@material = Material.new
 	end
 
+	def show
+		@material = Material.find(params[:id])
+	end
+
 	def create
 		@material = Material.new(material_params)
 		if @material.save
@@ -44,7 +48,7 @@ class MaterialsController < ApplicationController
 	private
 
 	def material_params
-		params.require(:material).permit(:brand, :color, :pic)
+		params.require(:material).permit(:brand)
 	end
 
 end

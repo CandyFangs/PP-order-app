@@ -5,8 +5,7 @@
 	<tr>
 		<th>ID</th>
 		<th>Rodzaj materiału</th>
-		<th>Kolor</th>
-		<th>Zdjęcie</th>
+		<th>Szczegóły</th>
 		<th>Edycja</th>
 		<th>Usuwanie</th>
 	</tr>
@@ -14,10 +13,10 @@
 	<tr>
 		<td><%= material.id %></td>
 		<td><%= material.brand %></td>
-		<td><%= material.color %></td>
-		<td><%= material.pic %></td>
+		<td><%= link_to 'Pokaż', material_path(material) %></td>
 		<td><%= link_to 'Edytuj', edit_material_path(material) %></td>
 		<td><%= link_to 'Usuń', material_path(material), method: :delete, data: { confirm: "Na pewno usunąć?" } %></td>
 	</tr>
 	<% end %>
 </table>
+<%= link_to "Wróć do strony początkowej", root_path %>
