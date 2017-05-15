@@ -1,9 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  brand: 
-  color: MyString
+  brand: "minky"
+  color: "red"
 
 two:
-  brand: 
-  color: MyString
+  brand: "fur"
+  color: "black"
+
+three:
+  brand: "satin"
+  color: "pink"

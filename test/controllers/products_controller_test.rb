@@ -13,22 +13,31 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should new response" do
-    get products_new_path
+    get new_product_path
     assert_response :success
   end
-  # test "should create new product" do
-  #   post products_path, params: { product: {id: 1} }
-  #   assert_response :success
-  # end
-  # test "should destroy product" do
-  #   product = products(:two)
-  #   product = products(:four)
-  #   assert_difference('Product.count', -1) do
-  #     product = products(:one)
-  #     delete product_path(product.id)
-  #   end
-  #    assert_redirected_to products_path
-  # end
-end
 
- # patch article_url(@article), params: { article: { title: "updated" } }
+  test "should create new product" do
+    assert_difference('Product.count') do
+    post products_url, params: { product: { kind: 'uszka', model: 'cute kitten', price: 30 } }
+    assert_redirected_to products_path
+    end
+  end
+
+  test "should update product" do
+    product = products(:one)
+    patch product_url(product), params: { product: { model: "updated" } }
+    assert_redirected_to products_path
+    product.reload
+    assert_equal "updated", product.model
+  end
+
+  test "should destroy product" do
+    product = products(:two)
+    assert_difference('Product.count', -1) do
+      delete product_path(product)
+    end
+    assert_redirected_to products_path
+  end
+
+end
