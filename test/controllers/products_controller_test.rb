@@ -7,14 +7,15 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  # test "should edit response" do
-  #   get products_path
-  #   assert_response :success
-  # end
-  # test "should new response" do
-  #   get products_new_path
-  #   assert_response :success
-  # end
+  test "should edit response" do
+    get products_path
+    assert_response :success
+  end
+
+  test "should new response" do
+    get products_new_path
+    assert_response :success
+  end
   # test "should create new product" do
   #   post products_path, params: { product: {id: 1} }
   #   assert_response :success
