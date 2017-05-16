@@ -1,0 +1,23 @@
+<%= flash[:notice] if flash[:notice] %>
+<br />
+<table class="table table-striped" border="1">
+<h3>Przypisane elementy</h3>
+<h4><%= @product.model %></h4>
+	<tr>
+		<th>ID</th>
+		<th>Nazwa</th>
+		<th>Materiał</th>
+		<th>Usuń</th>
+	</tr>
+	<% @elements.each do |element| %>
+	<tr>
+		<td><%= element.id %></td>
+		<td><%= element.name%></td>
+		<td><%= element.material.brand %></td>
+		<td><%= link_to 'Usuń', product_element_path(@product, element), method: :delete, data: { confirm: "Na pewno usunąć?" } %></td>
+	</tr>
+	<% end %>
+</table>
+<%= link_to 'Nowy element', new_product_element_path%>
+</br>
+<%= link_to "Wróć do produktów", products_path %>

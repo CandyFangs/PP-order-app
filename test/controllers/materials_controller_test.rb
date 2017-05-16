@@ -7,10 +7,11 @@ class MaterialsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  # test "should show response" do
-  #   get material_path(material)
-  #   assert_response :success
-  # end
+  test "should show response" do
+    material = materials(:one)
+    get material_colors_path(material)
+    assert_response :success
+  end
 
   test "should edit response" do
     get materials_path

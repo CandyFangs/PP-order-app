@@ -1,0 +1,12 @@
+<%= form_for([@material, @color]) do |f| %>
+	<div class="form-group">
+		<%= f.label :Kolor %>
+		<%= f.text_field :color %>
+	</div>
+	<div class="form-group">
+		<%= f.label :Zdjęcie %>
+		<%= f.text_field :picture%>
+	</div>
+<br />
+<%= f.submit "Zapisz" %>
+<% end %>

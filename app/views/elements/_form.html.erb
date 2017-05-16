@@ -1,0 +1,12 @@
+<%= form_for([@product, @element]) do |f| %>
+	<div class="form-group">
+		<%= f.label :name, "Nazwa" %>
+		<%= f.text_field :name %>
+	</div>
+	<div class="form-group">
+		<%= f.label :material_id, "Nazwa" %>
+		<%= f.collection_select(:material_id, Material.all, :id, :brand) %>
+	</div>
+<br />
+<%= f.submit "Zapisz" %>
+<% end %>

@@ -1,0 +1,4 @@
+<%= flash[:error] if flash[:error] %>
+<h3>Utwórz nowy kolor</h3>
+<%= render partial: 'form', locals: { color: @color } %>
+<%= link_to "Wróć do strony kolorów", material_colors_path %>

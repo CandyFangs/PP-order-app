@@ -7,7 +7,9 @@
 		<th>Typ</th>
 		<th>Model</th>
 		<th>Cena w zł</th>
+		<th>Opis</th>
 		<th>Zdjęcie</th>
+		<th>Elementy</th>
 		<th>Edycja</th>
 		<th>Usuwanie</th>
 	</tr>
@@ -16,8 +18,10 @@
 		<td><%= product.id %></td>
 		<td><%= product.kind %></td>
 		<td><%= product.model %></td>
+		<td><%= product.description %></td>
 		<td><%= product.price %></td>
 		<td><%= product.pic %></td>
+		<td><%= link_to 'Pokaż', product_elements_path(product) %></td>
 		<td><%= link_to 'Edytuj', edit_product_path(product) %></td>
 		<td><%= link_to 'Usuń', product_path(product), method: :delete, data: { confirm: "Na pewno usunąć?" } %></td>
 	</tr>
