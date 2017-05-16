@@ -1,6 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: "1"
   kind: "uszka"
   model: "kocie"
   description: "puchate"
@@ -8,6 +9,7 @@ one:
   pic: MyString
 
 two:
+  id: "2"
   kind: "obroża"
   model: "falbaniasta"
   description: "falbanki, wstążka, kokardki"
@@ -15,6 +17,7 @@ two:
   pic: MyString
 
 three:
+  id: "3"
   kind: "ogon"
   model: "lisi"
   description: "puchata kita"
@@ -22,6 +25,7 @@ three:
   pic: MyString
 
 four:
+  id: "4"
   kind: "łapki"
   model: "kocie"
   description: "puchate rękawiczki"

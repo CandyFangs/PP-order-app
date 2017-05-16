@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  material_id: MyString
-  product_id: MyString
+  name: "coś"
+  material_id: "1"
+  product_id: "1"
 
 two:
-  material_id: MyString
-  product_id: MyString
+  name: "coś innego"
+  material_id: "2"
+  product_id: "2"

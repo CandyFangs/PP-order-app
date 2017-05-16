@@ -28,21 +28,22 @@ class ColorsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
-  # test "should update color" do
-  #   material = materials(:one)
-  #   patch material_color_path(material, params: { color: { color: 'yellow' } })
-  #   assert_redirected_to material_colors_path(material)
-  #   color.reload
-  #   assert_equal "yellow", color.color
-  # end
+  test "should update color" do
+    material = materials(:one)
+    color = colors(:one)
+    patch material_color_path(material, color, params: { color: { color: 'yellow' } })
+    assert_redirected_to material_colors_path(material)
+    color.reload
+    assert_equal "yellow", color.color
+  end
 
-  # test "should destroy color" do
-  #   material = materials(:two)
-  #   assert_difference('Color.count', -1) do
-  #     delete material_colors_path(material, color)
-  #   end
-  #   assert_redirected_to material_colors_path
-  # end
-
+  test "should destroy color" do
+    material = materials(:two)
+    color = colors(:two)
+    assert_difference('Color.count', -1) do
+      delete material_color_path(material, color)
+    end
+    assert_redirected_to material_colors_path
+  end
 
 end
