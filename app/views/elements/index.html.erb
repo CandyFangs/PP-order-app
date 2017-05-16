@@ -1,6 +1,6 @@
 <%= flash[:notice] if flash[:notice] %>
 <br />
-<table class="table table-striped" border="1">
+<table class="table" border="1">
 <h3>Przypisane elementy</h3>
 <h4><%= @product.model %></h4>
 	<tr>
@@ -20,4 +20,4 @@
 </table>
 <%= link_to 'Nowy element', new_product_element_path%>
 </br>
-<%= link_to "Wróć do produktów", products_path %>
+<%= link_to "Cofnij", products_path %>

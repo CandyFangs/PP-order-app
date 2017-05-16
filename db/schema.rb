@@ -10,14 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170516082837) do
+ActiveRecord::Schema.define(version: 20170516124713) do
 
   create_table "colors", force: :cascade do |t|
     t.string "material_id"
     t.string "color"
-    t.string "picture"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "picture_file_name"
+    t.string "picture_content_type"
+    t.integer "picture_file_size"
+    t.datetime "picture_updated_at"
   end
 
   create_table "element_materials", force: :cascade do |t|
@@ -46,9 +49,12 @@ ActiveRecord::Schema.define(version: 20170516082837) do
     t.string "model"
     t.string "description"
     t.integer "price"
-    t.string "pic"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "picture_file_name"
+    t.string "picture_content_type"
+    t.integer "picture_file_size"
+    t.datetime "picture_updated_at"
   end
 
 end

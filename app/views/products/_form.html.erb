@@ -1,23 +1,23 @@
 <%= form_for(@product) do |f| %>
 	<div class="form-group">
-		<%= f.label :Typ %>
+		<%= f.label :kind, "Typ" %>
 		<%= f.text_field :kind %>
 	</div>
 	<div class="form-group">
-		<%= f.label :Model %>
+		<%= f.label :model, "Model" %>
 		<%= f.text_field :model %>
 	</div>
 	<div class="form-group">
-		<%= f.label :Opis %>
+		<%= f.label :description, "Opis" %>
 		<%= f.text_area :description %>
 	</div>
 	<div class="form-group">
-		<%= f.label :"Cena w zł" %>
+		<%= f.label :price, "Cena(zł)" %>
 		<%= f.text_field :price %>
 	</div>
 	<div class="form-group">
-		<%= f.label :Zdjęcie %>
-		<%= f.text_field :pic %>
+		<%= f.label :picture, "Zdjęcie" %>
+		<%= f.file_field :picture %>
 	</div>
 <br />
 <%= f.submit "Zapisz" %>
