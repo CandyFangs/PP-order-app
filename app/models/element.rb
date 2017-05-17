@@ -4,4 +4,5 @@ class Element < ApplicationRecord
 
 	belongs_to :product
 	belongs_to :material
+	has_many :order_item
 end

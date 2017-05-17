@@ -1,0 +1,7 @@
+<div class="product_choice">
+	<% @things.each do |things| %>
+		<p class="lead">
+	    <%= link_to "#{things.model}", "#", class: "btn btn-lg btn-secondary" %>
+	  </p>
+	  <% end %>
+</div>

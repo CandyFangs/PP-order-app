@@ -11,7 +11,6 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <link href="cover.css" rel="stylesheet">
   </head>
 
   <body>
@@ -20,12 +19,11 @@
           <div class="cover-container">
             <div class="masthead clearfix">
               <div class="inner">
-                <h3 class="masthead-brand"><%= image_tag '2logo.png' %></h3>
+
                 <nav class="nav nav-masthead">
                   <%= link_to "Produkty", products_path %>
                   <%= link_to "Materiały", materials_path %>
                   <a href="http://facebook.com/petprojectofficial">Pet Project</a>
-                  <%= link_to "Start", root_path %>
                 </nav>
               </div>
             </div>

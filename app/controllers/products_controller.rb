@@ -15,6 +15,7 @@ class ProductsController < ApplicationController
 			redirect_to products_path
 		else
 			flash[:error] = "Nie udało się zapisać"
+			puts @product.errors.inspect
 			render :new
 		end
 	end
@@ -30,6 +31,7 @@ class ProductsController < ApplicationController
 			redirect_to products_path
 		else
 			flash[:error] = "Nie udało się zapisać zmian"
+			puts @product.errors.inspect
 			render :edit
 		end
 	end
@@ -44,7 +46,7 @@ class ProductsController < ApplicationController
 	private
 
 	def product_params
-		params.require(:product).permit(:kind, :model, :price, :description, :picture)
+		params.require(:product).permit(:category_id, :model, :price, :description, :picture)
 	end
 
 end

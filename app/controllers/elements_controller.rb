@@ -19,6 +19,7 @@ class ElementsController < ApplicationController
 		else
 			flash[:error] = "Nie udało się zapisać"
 			render :new
+			puts @element.errors.inspect
 		end
 	end
 

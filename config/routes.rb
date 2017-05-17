@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   	resources :colors
   end
   root 'home#start'
+  resources :orders
+  resources :categories
 end

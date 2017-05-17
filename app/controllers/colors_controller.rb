@@ -36,6 +36,7 @@ class ColorsController < ApplicationController
 		else
 			flash[:error] = "Nie udało się zapisać zmian"
 			render :edit
+			puts @color.errors.inspect
 		end
 	end
 

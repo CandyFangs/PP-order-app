@@ -12,7 +12,7 @@
 		</tr>
 		<% @products.each do |product| %>
 		<tr>
-			<td><%= product.kind %></td>
+			<td><%= product.category.try :name %></td>
 			<td><%= product.model %></td>
 			<td><%= product.description %></td>
 			<td><%= product.price %></td>

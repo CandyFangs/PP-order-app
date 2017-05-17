@@ -1,0 +1,12 @@
+To co chcesz zamówić :D?
+</br>
+<div class="product_choice"
+	<%= radio_button_tag(:choice, "ears") %>
+	<%= label_tag(:choice_ears, "Uszka") %>
+	</br>
+	<%= radio_button_tag(:choice, "collar") %>
+	<%= label_tag(:choice_collar, "Obróżka") %>
+	<p class="lead">
+	  <%= link_to "Dalej", orders_path, class: "btn btn-md btn-secondary" %>
+	</p>
+</div>

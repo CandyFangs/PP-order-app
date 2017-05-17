@@ -1,11 +1,11 @@
-<%= form_for([@material, @color]) do |f| %>
+<%= form_for([@material, @color], html: {class: "form-horizontal"}) do |f| %>
 	<div class="form-group">
-		<%= f.label :color, "Kolor" %>
-		<%= f.text_field :color %>
+		<%= f.label :color, "Kolor", class: "control-label" %>
+		<%= f.text_field :color, class: "form-control col-sm-4" %>
 	</div>
 	<div class="form-group">
-		<%= f.label :picture, "Zdjęcie" %>
-		<%= f.file_field :picture %>
+		<%= f.label :picture, "Zdjęcie", class: "control-label" %>
+		<%= f.file_field :picture, class: "form-control col-sm-4" %>
 	</div>
 <br />
 <%= f.submit "Zapisz" %>
