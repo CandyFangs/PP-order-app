@@ -17,9 +17,13 @@
     <div class="site-wrapper">
         <div class="site-wrapper-inner">
           <div class="cover-container">
-            <div class="masthead clearfix">
+            <div class="masthead">
               <div class="inner">
-
+              <h3 class="masthead-brand">
+                <%= link_to root_path do %>
+                  <%= image_tag 'PP.png' %>
+                <% end %>
+              </h3>
                 <nav class="nav nav-masthead">
                   <%= link_to "Produkty", products_path %>
                   <%= link_to "Materiały", materials_path %>

@@ -3,7 +3,6 @@
 <h3>Tabela dostępnych kolorów</h3>
 <h4><%= @material.brand %></h4>
 	<tr>
-		<th>ID</th>
 		<th>Kolor</th>
 		<th>Zdjęcie</th>
 		<th>Edycja</th>
@@ -11,7 +10,6 @@
 	</tr>
 	<% @colors.each do |color| %>
 	<tr>
-		<td><%= color.id %></td>
 		<td><%= color.color%></td>
 		<td><%= image_tag color.picture %></td>
 		<td><%= link_to 'Edytuj', edit_material_color_path(@material, color) %></td>

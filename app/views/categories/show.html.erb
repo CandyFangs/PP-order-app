@@ -1,7 +1,5 @@
-<div class="product_choice">
-	<% @things.each do |things| %>
-		<p class="lead">
-	    <%= link_to "#{things.model}", "#", class: "btn btn-lg btn-secondary" %>
-	  </p>
-	  <% end %>
-</div>
+<% @things.each do |thing| %>
+  <%= link_to new_order_path(product_id: thing.id) do %>
+  	<%= image_tag thing.picture %>
+  <% end %>
+<% end %>

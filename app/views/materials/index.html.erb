@@ -1,7 +1,6 @@
 <%= flash[:notice] if flash[:notice] %>
 <table class="table" border="1">
 	<tr>
-		<th>ID</th>
 		<th>Rodzaj materiału</th>
 		<th>Szczegóły</th>
 		<th>Edycja</th>
@@ -9,7 +8,6 @@
 	</tr>
 	<% @materials.each do |material| %>
 	<tr>
-		<td><%= material.id %></td>
 		<td><%= material.brand %></td>
 		<td><%= link_to 'Pokaż', material_colors_path(material) %></td>
 		<td><%= link_to 'Edytuj', edit_material_path(material) %></td>

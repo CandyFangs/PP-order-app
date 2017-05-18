@@ -1,0 +1,15 @@
+<%= form_for([@order, @order_item], html: {class: "form-vertical"}) do |f| %>
+<% @elements.each do |e| %>
+	<div class="form-group">
+		<%= f.label :name, "#{e.name}", class: "control-label" %>
+		</br>
+			<% e.material.colors.all.each do |color| %>
+				<%= radio_button_tag(:"#{e.name}", "#{color.color}") %>
+				<%= label_tag(:"#{e.name}", "#{color.color}") %>
+				<br/>
+			<% end %>
+		</div>
+	<% end %>
+	<%= f.submit "Zapisz" %>
+<% end %>
+	

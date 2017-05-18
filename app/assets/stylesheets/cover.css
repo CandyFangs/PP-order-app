@@ -47,6 +47,7 @@ body {
 .site-wrapper-inner {
   display: table-cell;
   vertical-align: top;
+  padding-top: 200px;
 }
 .cover-container {
   margin-right: auto;
@@ -135,7 +136,8 @@ body {
     top: 0;
   }
   .mastfoot {
-    position: fixed;
+    margin-right: auto;
+    margin-left: auto;
     bottom: 0;
   }
   /* Start the vertical centering */

@@ -1,6 +1,7 @@
 	<%= flash[:notice] if flash[:notice] %>
 	<table class="table" border="1">
 		<tr>
+			<th>ID</th>
 			<th>Typ</th>
 			<th>Model</th>
 			<th>Opis</th>
@@ -12,7 +13,8 @@
 		</tr>
 		<% @products.each do |product| %>
 		<tr>
-			<td><%= product.category.try :name %></td>
+			<td><%= product.id %></td>
+			<td><%= product.category.name %></td>
 			<td><%= product.model %></td>
 			<td><%= product.description %></td>
 			<td><%= product.price %></td>
