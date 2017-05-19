@@ -6,13 +6,11 @@
 	<tr>
 		<th>Nazwa</th>
 		<th>Materiał</th>
-		<th>Usuń</th>
 	</tr>
 	<% @elements.each do |element| %>
 	<tr>
 		<td><%= element.name%></td>
 		<td><%= element.material.brand %></td>
-		<td><%= link_to 'Usuń', product_element_path(@product, element), method: :delete, data: { confirm: "Na pewno usunąć?" } %></td>
 	</tr>
 	<% end %>
 </table>

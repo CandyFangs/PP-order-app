@@ -5,15 +5,11 @@
 	<tr>
 		<th>Kolor</th>
 		<th>Zdjęcie</th>
-		<th>Edycja</th>
-		<th>Usuwanie</th>
 	</tr>
 	<% @colors.each do |color| %>
 	<tr>
 		<td><%= color.color%></td>
 		<td><%= image_tag color.picture %></td>
-		<td><%= link_to 'Edytuj', edit_material_color_path(@material, color) %></td>
-		<td><%= link_to 'Usuń', material_color_path(@material, color), method: :delete, data: { confirm: "Na pewno usunąć?" } %></td>
 	</tr>
 	<% end %>
 </table>
