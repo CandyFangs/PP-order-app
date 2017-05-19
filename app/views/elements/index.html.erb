@@ -10,7 +10,7 @@
 	<% @elements.each do |element| %>
 	<tr>
 		<td><%= element.name%></td>
-		<td><%= element.material.brand %></td>
+		<td><%= link_to element.material.brand, material_colors_path(element.material) %> </td>
 	</tr>
 	<% end %>
 </table>
